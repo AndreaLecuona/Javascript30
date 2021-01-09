@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <div class="clock">
+    <div class="clock-face">
+      <div class="center-piece"></div>
+      <div class="hand hour-hand"></div>
+      <div class="hand min-hand"></div>
+      <div class="hand second-hand"></div>
+    </div>
+  </div>
+
+  <div class="illustration">
+    <div class="cat">
+      <img src="sleeping cat.svg" alt="sleeping cat">
+      <!-- ILLUSTRATION: 'https://www.freepik.com/free-photos-vectors/book' - Book vector created by pch.vector - www.freepik.com -->
+    </div>
+    <span>z</span>
+  </div>
+
+  <style>
+    html {
+      background: #848ccf;
+      font-family: 'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      background-color: #ffe4e4;
+      border: 5px solid #be5683;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #fff,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .center-piece{
+      width: 1rem;
+      height: 1rem;
+      background: #be5683;
+      border-radius: 100%;
+      position: absolute;
+      top: 49%;
+      left: 48.3%;
+      z-index: 1;
+    }
+
+    .hand { 
+      height: 7px;
+      background: #93b5e1;
+      position: absolute;
+      top: 50%;
+      border-radius: 5px 0 0 5px;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+    .hour-hand{
+      width: 30%;
+      left: 20%;
+    }
+    .min-hand{
+      width: 40%;
+      left: 10%;
+    }
+    .second-hand {
+      width: 45%;
+      height: 3px;
+      top: 51%;
+      left: 5%;
+      background: #be5683;
+    }
+
+    .illustration{
+      width: 35%;
+      position: absolute;
+      left: 10%;
+      top: 60%;
+    }
+    .cat{
+      width: 90%;
+    }
+
+    span{
+      font-family: 'Patrick Hand', cursive;
+      color: #ffe4e4;
+      font-size: 3rem;
+      position: absolute;
+      top: 35%;
+      left: 30%;
+      animation-name: goUp;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes goUp {
+      from {top: 35%; transform: rotate(-20deg); opacity: 10%;}
+      to {top: 0%; transform: rotate(30deg); opacity: 100%;}
+    }
+
+  </style>
+
+  <script>
+    const segundero = document.querySelector('.second-hand');
+    
+    const minutero = document.querySelector('.min-hand');
+
+    const horario = document.querySelector('.hour-hand');
+
+    function setDate(){
+      const now = new Date()
+      const seconds = now.getSeconds();
+      const secondsDegrees = ((seconds / 60) * 360) + 90;
+      segundero.style.transform = `rotate(${secondsDegrees}deg)`;
+      console.log(seconds);
+
+      
+      const minutes = now.getMinutes();
+      const minutesDegrees = ((minutes / 60) * 360) + 90;
+      minutero.style.transform = `rotate(${minutesDegrees}deg)`;
+
+      
+      const hours = now.getHours();
+      const hoursDegrees = ((hours / 12) * 360) + 90;
+      horario.style.transform = `rotate(${hoursDegrees}deg)`;
+
+      
+      if (secondsDegrees === 90) {segundero.style.transition = 'all 0s';}
+      else {segundero.style.transition = 'all 0.05s';};
+
+      if (minutesDegrees === 90) {minutero.style.transition = 'all 0s';}
+      else {minutero.style.transition = 'all 0.5s';};
+
+    }
+
+    setInterval(setDate, 1000);
+
+  </script>
+</body>
+</html>
