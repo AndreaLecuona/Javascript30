@@ -1,0 +1,70 @@
+:root {
+    --base: #FFA3AC;
+    --spacing: 10px;
+    --blur: 10px;
+  }
+
+  img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    width: 250px;
+    border-radius: 5px;
+  }
+
+  .hl {
+    color: var(--base);
+  }
+
+  body {
+    text-align: center;
+    background: white;
+    color: #3f4441;
+    font-family: 'Paytone One', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    background-image: url(dot-grid.png);
+  }
+  h2{
+    margin-bottom: 20px;
+  }
+  .controls {
+    margin-bottom: 50px;
+  }
+
+  input {
+    width: 100px;
+    margin-left: 5px;
+    margin-right: 20px;
+  }
+
+.slider {
+  appearance: none;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  position: relative;
+  bottom: 4px;
+  border-radius: 5px;
+}
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background: var(--base);
+  cursor: pointer;
+}
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 32px;
+  height: 13px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
