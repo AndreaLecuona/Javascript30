@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Hold Shift to Check Multiple Checkboxes</title>
+</head>
+<body>
+   <!--
+   The following is a common layout you would see in an email client.
+
+   When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
+
+  -->
+  <div class="wrapper">
+    <div class="inbox">
+      <div class="item">
+        <input type="checkbox">
+        <p>This is an inbox layout.</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Check one item</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Hold down your Shift key</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Check a lower item</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Everything in between should also be set to checked</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Made without any libraries</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Just regular JavaScript</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Check it out!</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Don't forget to try the <i>"Deselect all"</i> button. It works too!</p>
+      </div>
+    </div>
+    <button class="btn">Deselect all</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
