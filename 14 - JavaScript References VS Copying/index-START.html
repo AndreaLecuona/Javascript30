@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Reference VS Copy</title>
+</head>
+<body>
+  <p style="font-family: 'Courier New', Courier, monospace;">Check the console >>></p>
+
+  <script>
+
+    // STRINGS, BOOLEANS Y NUMBERS
+
+    let edad = 100;
+    let edad2 = edad;
+    console.log(edad, edad2); //100 100
+
+    edad = 200;
+    console.log(edad, edad2); //200 100
+  
+
+
+
+
+    // ARRAYS
+
+    const players = ['Ginobili', 'Scola', 'Oberto', 'Nocioni'];
+
+    //Reference:
+    const equipo = players;
+    console.log(players, equipo);
+
+    //Copy:
+    // slice() no arguments
+    const equipo2 = players.slice();
+    equipo2[3] = "Campazzo";
+    console.log(players, equipo2);
+
+    // new array and concatenate
+    const equipo3 = [].concat(players);
+    equipo3[3] = "Sánchez";
+    console.log(players, equipo3);
+
+    // ES6 Spread
+    const equipo4 = [...players];
+    equipo4[3] = "Delfino";
+    console.log(players, equipo4);
+
+    // Array.from()
+    const equipo5 = Array.from(players);
+    equipo5[3] = "Prigioni";
+    console.log(players, equipo5);
+
+
+
+
+
+    // OBJECTS
+    
+    const person = {
+      name: 'Wes Bos',
+      age: 80
+    };
+
+
+    // Reference:
+    // const anonimo = person;
+    // anonimo.direccion = 'Av. Santa Fe 1800';
+    // console.log(person, anonimo);
+
+    //Copy:
+    // Object.assign()
+    const mengano = Object.assign({}, person, {age: 66, direccion: 'Av. Santa Fe 1888'});
+    console.log(person, mengano);
+
+    // Spread operator
+    const zutano = {...person};
+    zutano.age = 54;
+    console.log(person, zutano);
+
+
+
+    // Copies reach 1 LEVEL DEEP
+    const manu = {
+      nombre: "Emanuel David Ginóbili",
+      origen: "Bahía Blanca, Argentina",
+      altura: 1.98,
+      playsoffsNBA: {
+        equipo: "San Antonio Spurs",
+        partidos: 218,
+        puntos: 14,
+        rebotes: 4,
+        promedioAsistencias: 3.8
+      }
+    }
+    console.table(manu);
+
+    // Copiamos el objeto
+    const registros = Object.assign({}, manu);
+
+    // Modify 1 level deep property (works fine)
+    registros.identificador = 107;
+    console.table(registros);
+
+    // Modify 2 level deep property (also changes the original)
+    // registros.playsoffsNBA.puntos = 70;
+    // console.table(registros);
+
+
+    
+    // Deep clone
+
+    // Lodash or
+    // JSON manipulation:
+    const registro2 = JSON.parse(JSON.stringify(manu));
+    registro2.playsoffsNBA.puntos = 60; 
+    console.table(manu);
+    console.table(registro2);
+
+  </script>
+
+</body>
+</html>
