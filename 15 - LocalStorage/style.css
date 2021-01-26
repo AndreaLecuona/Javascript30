@@ -1,0 +1,97 @@
+html {
+  box-sizing: border-box;
+  background: url("./jordan-arnold-Ul07QK2AR-0-unsplash.jpg") center no-repeat; /* Photo by Jordan Arnold on Unsplash */
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'DM Serif Text', serif;
+  font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  padding: 20px;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  width: 50%;
+  padding: 10px;
+  border-bottom: 4px double rgba(0, 0, 0, 0.4);
+}
+
+.plates {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.plates li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  font-weight: 100;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.plates label {
+  flex: 1;
+  cursor: pointer;
+}
+
+.plates input {
+  display: none;
+}
+
+.plates input + label:before {
+  content: "⬜️";
+  margin-right: 10px;
+}
+
+.plates input:checked + label:before {
+  content: "⭐";
+}
+
+.add-items {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.add-items input {
+  padding: 10px;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.add-items input[type="button"],
+.add-items input[type="submit"] {
+  margin: 0.6rem 0.2rem 0 0.2rem;
+  font-family: 'DM Serif Text', serif;
+  border-radius: 5px;
+}
+
+.add-items input[type="text"]{
+  border-radius: 5px;
+  width: 62%;
+}
+.add-items input[type="text"]::placeholder{
+  font-family: 'DM Serif Text', serif;
+}
