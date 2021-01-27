@@ -1,0 +1,28 @@
+html {
+    color: white;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255, 0.9);
+}
+
+h2{
+    margin-right: 3rem;
+    color: white;
+}
+
+h1 {
+    text-shadow: 10px 10px 0 rgba(0,0,0,1);
+    font-size: 100px;
+    font-family: 'Monoton', Helvetica, cursive;
+}
