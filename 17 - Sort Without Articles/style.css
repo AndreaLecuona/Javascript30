@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 500;
+    background: url("myke-simon-unsplash.jpg"); /* Photo by Myke Simon on Unsplash */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#movies {
+    list-style: inside square;
+    font-size: 0.9rem;
+    background: #361a25;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#movies li {
+    border-bottom: 1px solid #cc2668;
+    padding: 15px;
+    color: white;
+}
+
+#movies li:last-child {
+    border-bottom: 0;
+}
