@@ -1,0 +1,101 @@
+img{
+    margin-left: -5rem;
+    height: 100%;
+}
+li{
+    list-style: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient( #f7f7f7 25%, purple);
+}
+
+.hero{
+    margin: 50px auto 0;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.text{
+    width: 40%;
+    text-transform: uppercase;
+}
+
+.text h1{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 50px;
+}
+.text h2{
+    padding-right: 40px;
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top:-10px;
+}
+.text i{
+font-size: 50px;
+color: purple;
+}
+/* regular 400 */
+
+.artist{
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+.artist .tapa{
+    overflow: hidden;
+    margin-left: 180px;
+    width: 330px;
+    height: 330px;
+}
+
+#circulo {
+    position: absolute;
+    z-index: -1;
+    right: 150px;
+    width: 330px;
+    height: 330px;
+    background: black;
+    border-radius: 50%
+}
+#circulo2 {
+    position: absolute;
+    top: 130px;
+    right: 330px;
+    width: 70px;
+    height: 70px;
+    background: black;
+    border-radius: 50%
+}
+
+/* Photo by Caleb George on Unsplash */
+
+.tracks{
+    padding: 0;
+    margin: 0 auto;
+    width: 60%;
+}
+.tracks li{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+h3{
+    font-weight: 700;
+}
+.bigger{
+    padding-left: 20px;
+    font-size: 25px;
+    font-weight: 400;
+    color: purple;
+}
