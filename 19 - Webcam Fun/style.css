@@ -1,0 +1,124 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+}
+
+.photobooth {
+  color: #434343;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  border-radius: 2px;
+}
+
+/*clearfix*/
+.photobooth:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.controls {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.player {
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.rgb {
+  padding-bottom: 15px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.rgb > input[type=range] {
+  overflow: hidden;
+  -webkit-appearance: none;
+  background-color: #866b9733;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.rgb > input[type=range]::-webkit-slider-thumb {
+  width: 15px;
+  -webkit-appearance: none;
+  height: 15px;
+  border-radius: 100%;
+  cursor: ew-resize;
+}
+
+.rgb input[name=rmin]::-webkit-slider-thumb,
+.rgb input[name=rmax]::-webkit-slider-thumb {
+  background: #be3636;
+}
+
+.rgb input[name=gmin]::-webkit-slider-thumb,
+.rgb input[name=gmax]::-webkit-slider-thumb {
+  background: #36be53;
+}
+
+.rgb input[name=bmin]::-webkit-slider-thumb,
+.rgb input[name=bmax]::-webkit-slider-thumb {
+  background: #365abe;
+}
+
+.rgb > label {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  border: none;
+  background-color: rgb(241, 241, 66);
+  color: #434343;
+  cursor: pointer;
+  padding: 10px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.photo {
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.strip {
+  margin: 0 auto;
+  padding: 1.5rem;
+  grid-column: 1 / 3;
+}
+
+.strip img {
+  width: 100px;
+  overflow-x: scroll;
+  padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  background: white;
+  margin-right: 10px;
+}
+
+.strip a:nth-child(5n+1) img { transform: rotate(10deg); }
+.strip a:nth-child(5n+2) img { transform: rotate(-2deg); }
+.strip a:nth-child(5n+3) img { transform: rotate(8deg); }
+.strip a:nth-child(5n+4) img { transform: rotate(-11deg); }
+.strip a:nth-child(5n+5) img { transform: rotate(12deg); }
