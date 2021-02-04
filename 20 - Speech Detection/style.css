@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: url('./christmas-colour.png');
+    font-family: 'Caveat', cursive;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.instruction {
+    background-color: #ffffff;
+    margin: 0px auto 10px auto;
+    width: 100%;
+    color: rgb(131, 131, 131);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px
+}
+
+h3 {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+    text-decoration: underline;
+}
+
+.words {
+    max-width: 500px;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    padding: 7rem 5rem 3rem 7rem;
+    /* background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px; */
+    background-blend-mode: multiply;
+    background-color: rgb(255, 255, 255);
+    background-image: url('./paper_fibers.png');
+    background-size: 100% 3rem;
+    position: relative;
+    line-height: 2.1rem;
+    color: rgb(75, 75, 75);
+}
+  
+p {
+    margin: 0 0 2.2rem;
+}
+
+.words:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    top: 0;
+    left: 50px;
+    bottom: 0;
+    border: 1px solid;
+    border-color: transparent #e78a8a;
+}
