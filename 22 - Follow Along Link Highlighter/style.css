@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0; /* Important! */
+  font-family: 'PT Mono', monospace;
+  color: rgb(235, 225, 243);
+  background:
+  rgb(33, 23, 39)  
+  /* rgb(175, 167, 180)  */
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 500px;
+  font-size: 20px;
+  line-height: 2;
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 0;
+
+}
+
+small {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+  text-decoration-line: line-through;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(33, 23, 39);
+  background: rgba(241, 241, 241, 0.051);
+  border-radius: 20px;
+  padding: 5px;
+  z-index: 10;
+}
+a:hover {
+  color: rgb(33, 23, 39);
+}
+
+.highlight {
+  transition: all 0.2s;
+  border-bottom: 2px solid rgb(253, 255, 114);
+  position: absolute;
+  top: 0;
+  background: rgb(255, 234, 45);
+  left: 0;
+  z-index: -1;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.menu {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin:100px 0;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 15px;
+  color: rgb(235, 225, 243);
+}
+.menu a:hover {
+  color: rgb(33, 23, 39);
+}
