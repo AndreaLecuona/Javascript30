@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speech Synthesis</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="voiceinator">
+
+      <h1>The Voiceinator <span class="model">5000</span></h1>
+      
+      <textarea name="text">Hello! I love JavaScript 👍</textarea>
+      
+      <select name="voice" id="voices">
+        <option value="">Select A Voice</option>
+      </select>
+
+      <div id="rate">
+        <label for="rate">Rate:</label>
+        <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+      </div>
+
+      <div id="pitch">
+        <label for="pitch">Pitch:</label>
+        <input name="pitch" type="range" min="0" max="2" step="0.1">
+      </div>
+
+      <button id="stop">Stop!</button>
+      <button id="speak">Speak</button>
+
+    </div>
+
+    <div class="image">
+      <img src="./hal-9000.png" alt="">
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
