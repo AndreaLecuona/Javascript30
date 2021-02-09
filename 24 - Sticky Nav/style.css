@@ -1,0 +1,143 @@
+html {
+  box-sizing: border-box;
+  background: linear-gradient(rgb(74, 77, 70) 5%, black 50%);
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.site-wrap {
+  max-width: 700px;
+  margin: 70px auto;
+  background: white;
+  padding: 40px;
+  text-align: justify;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(0.98); /* !!! */
+  transition: transform 0.5s;
+}
+
+.site-wrap h2,
+.site-wrap h4 {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+.site-wrap h2{
+  border-bottom: 3px solid greenyellow;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+.site-wrap h4 {
+  color: rgb(74, 77, 70);
+  padding-top: 0.5rem;
+  padding-bottom: 1.7rem;
+}
+
+.site-wrap p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+.site-wrap img {
+  border-bottom: 3px solid greenyellow;
+}
+
+.fixed-nav .site-wrap {
+  transform: scale(1); /* !!! */
+}
+
+
+header {
+  text-align: center;
+  height: 70vh;
+  background: url('./daniel-burka-unsplash.png') bottom center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  font-size: 7vw;
+  text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+  font-family: 'Fugaz One', cursive;
+  text-transform: uppercase;
+}
+
+nav {
+  background: rgb(74, 77, 70);
+  top: 0;
+  width: 100%;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 1;
+  font-family: 'Fugaz One', cursive;
+  text-transform: uppercase;
+}
+
+.fixed-nav nav {
+  position: fixed; /* !!! */
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li:hover {
+  transition: background-color ease-in-out 0.4s;
+  background-color: rgb(63, 63, 63);
+}
+
+li.logo {
+  max-width: 0; /* !!! */
+  overflow: hidden;
+  background: white;
+  transition: all .5s;
+  font-weight: 600;
+  font-size: 30px;
+}
+li.logo a:hover {
+  color: white;
+}
+
+.fixed-nav li.logo {
+  max-width: 500px; /* !!! */
+}
+
+li.logo a {
+  color: black;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+  color: greenyellow;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
