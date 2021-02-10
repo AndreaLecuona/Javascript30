@@ -1,0 +1,44 @@
+html {
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after { 
+    box-sizing: inherit; 
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div {
+    width: 100%;
+    padding: 100px;
+}
+
+.one {
+    background: thistle;
+    cursor: pointer;
+    box-shadow: 2px 2px lightslategrey;
+}
+
+.two {
+    background: mistyrose;
+    cursor: pointer;
+    box-shadow: 2px 2px lightslategrey;
+}
+
+.three {
+    background: coral;
+    cursor: pointer;
+    box-shadow: 2px 2px lightslategrey;
+}
+
+button {
+    background: mintcream;
+    border: 1px dotted lightcyan;
+    box-shadow: 2px 2px lightslategrey;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
