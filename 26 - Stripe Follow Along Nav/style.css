@@ -1,0 +1,160 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('./positive.png');
+}
+
+h2 {
+    margin: 1rem auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    font-size: 5rem;
+    background-color: white;
+    width: 90%;
+    
+}
+
+nav {
+    position: relative;
+    perspective: 600px;
+}
+
+.cool > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    background: #ea2c62;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 15px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.cool > li > a:hover {
+    background-color: #c22551;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cool > li {
+    position: relative; /* !!! */
+    display: flex;
+    justify-content: center;
+}
+
+
+.dropdown {
+    opacity: 0; /* !!! */
+    position: absolute;
+    overflow: hidden;
+    padding: 20px;
+    top: -20px;
+    border-radius: 2px;
+    transition: all 0.5s; /* !!! */
+    transform: translateY(100px);
+    will-change: opacity;
+    display: none; /* !!! */
+}
+
+.trigger-enter .dropdown {
+    display: block;
+}
+
+.trigger-enter-active .dropdown {
+    opacity: 1;
+}
+
+
+
+
+.dropdownBackground {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+    transition: all 0.3s, opacity 0.1s, transform 0.2s; /* !!! */
+    transform-origin: 50% 0;
+    display: flex;
+    justify-content: center;
+    opacity:0; /* !!! */
+}
+
+.dropdownBackground.open {
+    opacity: 1; /* !!! */
+}
+
+
+
+.arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: white;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.bio {
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.7;
+}
+
+.bio img {
+    float: left;
+    margin-right: 20px;
+    width: 80px;
+}
+
+.courses {
+    min-width: 300px;
+}
+
+.courses li {
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #adb36e;
+}
+
+a.button {
+    /* background: black; */
+    display: block;
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+.tw { background-color: #ff9a8c; }
+.fb { background-color: black; }
+.b { background-color: #ff9a8c; }
+.c { background-color: black; }
