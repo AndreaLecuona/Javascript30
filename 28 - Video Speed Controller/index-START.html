@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Speed Scrubber</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <video class="flex" width="765" height="430" src="./sampleVid.mp4" loop controls></video>
+    <div class="speed">
+      <div class="speed-bar">1×</div>
+    </div>
+  </div>
+
+<script>
+  const speed = document.querySelector('.speed');
+  const bar = document.querySelector('.speed-bar');
+  const video = document.querySelector('.flex');
+
+  speed.addEventListener('mousemove', function(e){
+    const y = e.pageY - this.offsetTop; //ubicamos el valor 0 (el minimo de la barra de velocidad) del evento mousemove, en el borde superior de la barra (para que la modificacion de velocidad empiece desde ahi). Nos devuelve el valor del movimiento del mouse sobre la barra
+
+    const percent = y / this.offsetHeight; //traducimos los valores en px del movimiento sobre la barra a porcentaje
+
+    const min = 0.4; //establecemos valores maximos y minimos de la barra
+    const max = 4;
+
+    const height = Math.round(percent * 100) + '%'; //formateamos para obtener un porcentaje en numeros enteros
+
+    const playbackRate = percent * (max - min) + min; //de esta forma relacionamos el porcentaje minimo 0% con nuestro valor minimo personalizado 0.4, y el maximo 100% con nuestro maximo 4
+    bar.textContent = playbackRate.toFixed(2) + 'x'; //visualizamos los numeros correspondientes al valor personalizado de velocidad. Lo formateamos para que solo muestre dos decimales
+    bar.style.height = height; //visualizamos los movimientos sobre la barra actualizandolos dinamicamente
+
+    video.playbackRate = playbackRate; //relacionamos nuestros valores dinamicos del mousemove con la propiedad de velocidad de reproduccion del elemento video, que ofrece del 0.5 al 10
+  });
+
+</script>
+</body>
+</html>
