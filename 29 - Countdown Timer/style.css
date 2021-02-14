@@ -1,0 +1,134 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: whitesmoke;
+  /* background: linear-gradient(45deg,  #42a5f5 0%,#478ed1 50%,#0d47a1 100%); */
+  background-image: url('./repeated-square.png');
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Bungee', cursive;
+}
+
+.display__time-left {
+  font-weight: 100;
+  font-size: 15rem;
+  margin: 0;
+  color: rgb(70, 70, 70);
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.05);
+}
+
+.timer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.timer__controls {
+  display: flex;
+}
+
+.timer__controls > * {
+  flex: 1;
+}
+
+.timer__controls form {
+  flex: 1;
+  display: flex;
+}
+
+.timer__controls input {
+  flex: 1;
+  border: 0;
+  padding: 0 3rem;
+  font-family: 'Bungee', cursive;
+  font-size: 1.5rem;
+  border-bottom: 3px solid rgba(0,0,0,0.2);
+  color: rgb(70, 70, 70);
+}
+
+.timer__button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.1);
+  padding: 1rem;
+  font-family: 'Bungee', cursive;
+  border: 3px solid transparent;
+  border-bottom: 3px solid rgba(0,0,0,0.2);
+}
+
+.timer__button:nth-child(1) {
+  background-color: #E0F4F5;
+}
+.timer__button:nth-child(2) {
+  background-color: #C2E9EB;
+}
+.timer__button:nth-child(3) {
+  background-color: #94D9DB;
+}
+.timer__button:nth-child(4) {
+  background-color: #65C8CB;
+}
+.timer__button:nth-child(5) {
+  background-color: #2E878A;
+}
+
+.timer__button:hover,
+.cancel:hover {
+  background: #f3dfc1;
+  outline: 0;
+}
+.timer__button:focus {
+  background: #ddbea8;
+  border: 3px solid #f68e7b;
+  outline: 0;
+}
+
+.display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.display__end-time {
+  font-size: 4rem;
+  color: rgb(70, 70, 70);
+  margin: 0;
+}
+
+.cancel {
+  font-size: 2rem;
+  color: rgb(70, 70, 70);
+  font-family: 'Bungee', cursive;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.vibrate {
+  color: #f68e7b;
+  animation: vibration 0.15s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+@keyframes vibration {
+  0%{ transform: translateX(0); }
+  25%{ transform: translateX(3px); }
+  50%{ transform: translateX(0); }
+  75%{ transform: translateX(-3px); }
+  100%{ transform: translateX(0); }
+}
