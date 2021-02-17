@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Poke-Whack A Mole!</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="instructions">
+    <h1>Catch 'em all!</h1>
+    <p>You've got 10 seconds to capture as many Digglets as you can by clicking on them. Ready?</p>
+    <button onClick="startGame()">Start!</button>
+  </div>
+
+  <p class="subtitle">Your score:<span class="score">0</span></p>
+
+  <div class="game">
+    <div class="cursor"></div>
+
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+
+</html>

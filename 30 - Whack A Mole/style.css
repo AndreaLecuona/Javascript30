@@ -1,0 +1,147 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: #dda15e;
+  position: relative;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Luckiest Guy', cursive;
+  text-align: center;
+  cursor: crosshair;
+}
+
+.instructions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  opacity: 0.95;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+.transparent {
+  opacity: 0;
+}
+.dissapear {
+  display: none;
+}
+
+.instructions p {
+  font-size: 2rem;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto 3rem auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 10rem;
+  line-height: 1;
+  margin: 15rem auto 5rem auto;
+  color: #FFDE00;
+  -webkit-text-stroke: 3px #3B4CCA;
+}
+
+button {
+  text-align: center;
+  border: none;
+  background-color: #FF0000;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.subtitle {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 4rem;
+  color: white;
+}
+
+.score {
+  background: rgba(88, 88, 88, 0.2);
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin-left: 2rem;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 70px auto 100px auto;
+  position: relative;
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  background: url(Pokeball_cursor.svg);
+  position: absolute;
+  z-index: 20;
+  display: none;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(dirt-02.svg) bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height: 75px;
+  position: absolute;
+  z-index: 2;
+  bottom: 0px;
+}
+
+.hole::before {
+  display: block;
+  background: url(back-03.svg) bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 150%;
+  height: 138px;
+  position: absolute;
+  z-index: -1;
+  bottom: 0px;
+  left: -50px;
+}
+
+.mole {
+  background: url('diglett-01.svg') bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  left: -50px;
+  top: 100%;
+  width: 150%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0%;
+}
+
+/* I do not own any rights on the Pokemon characters or franchise */
