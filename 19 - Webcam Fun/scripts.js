@@ -34,7 +34,7 @@ function paintToCanvas() {
         let pixels = ctx.getImageData(0, 0, width, height);
         
         //pixels = redEffect(pixels); //FILTRO ROJO
-        //pixels = rgbSplit(pixels); //FILTRO SEPARACION RGB
+        pixels = rgbSplit(pixels); //FILTRO SEPARACION RGB
         //ctx.globalAlpha = 0.1; //efecto fantasma
         pixels = greenScreen(pixels); //FILTRO CHROMA
 
