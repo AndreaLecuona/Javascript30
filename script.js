@@ -73,7 +73,7 @@ const challenges = [
     },
     {
         folder: "19 - Webcam Fun",
-        concepts: "- Necesita levantar un servidor sencillo <br>- Relación obj.navigator-<video>-<canvas> para generar un video en vivo y llevar acciones sobre él en tiempo real (filtros y descarga) <br>- El canvas debe tener mismo ancho y alto del video para poder recibir sus datos <br>- La información de colores de pixeles de la imagen es representada en consola a través de miles de arrays que contienen una sucesión de números cuyo orden se corresponde con el orden RGBA. Es decir, en los datos [228, 220, 210, 255, 200, 240, ....] podemos leer: [228=R, 220=G, 210=B, 255=A, 200=R, 240=G, ....] <br>- Ponerle un return a un setInterval nos facilita su acceso en caso de necesitar detenerlo"
+        concepts: "- Necesita levantar un servidor sencillo <br>- Relación obj.navigator-video-canvas para generar un video en vivo y llevar acciones sobre él en tiempo real (filtros y descarga) <br>- El canvas debe tener mismo ancho y alto del video para poder recibir sus datos <br>- La información de colores de pixeles de la imagen es representada en consola a través de miles de arrays que contienen una sucesión de números cuyo orden se corresponde con el orden RGBA. Es decir, en los datos [228, 220, 210, 255, 200, 240, ....] podemos leer: [228=R, 220=G, 210=B, 255=A, 200=R, 240=G, ....] <br>- Ponerle un return a un setInterval nos facilita su acceso en caso de necesitar detenerlo"
     },
     {
         folder: "20 - Speech Detection",
